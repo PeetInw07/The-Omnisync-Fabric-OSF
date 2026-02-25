@@ -1,4 +1,5 @@
-# 1. Architecture Specification (OSF)
+# The-Omnisync-Fabric-OSF
+## 1. Architecture Specification (OSF)
 
 **The Omnisync Fabric (OSF)** ถูกออกแบบโดยใช้สถาปัตยกรรมแบบ Meta-Physical Layered Architecture ซึ่งผสมผสานระหว่างการประมวลผลข้อมูลทางชีวภาพ (Biological Computing) และการจำลองการสื่อสารเชิงควอนตัม (Quantum Communication Simulation) โครงสร้างของระบบถูกแบ่งออกเป็น 4 เลเยอร์หลัก ดังนี้:
 
