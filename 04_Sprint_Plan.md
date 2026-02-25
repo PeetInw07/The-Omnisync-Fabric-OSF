@@ -1,5 +1,5 @@
 # The-Omnisync-Fabric-OSF
-## แผนการดำเนินงานจำลองระบบ (Sprint Alpha + 1
+## 4.แผนการดำเนินงานจำลองระบบ (Sprint Alpha + 1
 
 ---
 
