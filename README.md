@@ -1,5 +1,6 @@
 # 🌐 The Omnisync Fabric (OSF)
 **Meta-Physical Network for Full-Spectrum Experience**
+โครงการ The Omnisync Fabric (OSF) คือการจำลองเครือข่ายสื่อสารแห่งอนาคตที่มุ่งเน้นการส่งผ่าน "ประสบการณ์" และ "อารมณ์" (Full-Spectrum Experience) ระหว่างกลุ่มผู้ใช้งาน 5 คน โดยใช้การผสมผสานระหว่างเทคโนโลยีชีวภาพและควอนตัมจำลอง
 
 ---
 
@@ -44,6 +45,10 @@
 * **Routing Efficiency:** ใช้ Dijkstra's Algorithm ปรับจูนด้วย Fibonacci Heap เพื่อรองรับโครงสร้าง Mesh Network
 * **Psychological Safety:** ระบบ Mind-Wall จะดรอปแพ็กเก็ตที่มีอารมณ์ด้านลบรุนแรงทันทีเพื่อป้องกันผู้รับ
 * **Latency Simulation:** ใช้ Asynchronous Programming (Python Asyncio) เพื่อจำลองความเร็วในระดับ Zero Latency
+---
+
+## บทสรุปเชิงเทคนิค (Technical Summary)
+The Omnisync Fabric (OSF) ไม่ได้เป็นเพียงการส่งข้อมูลแบบดิจิทัล แต่เป็นการประยุกต์ใช้แนวคิด Quantum DNA Resonance เพื่อก้าวข้ามข้อจำกัดของโปรโตคอลการสื่อสารในปัจจุบัน โดยโครงการนี้ได้รับแรงบันดาลใจจากมาตรฐานสากล เช่น Tactile Internet (IEEE 1918.1) และโครงสร้าง Delay-Tolerant Networking (DTN) ของ NASA
 
 ---
 *จัดทำโดย: นักศึกษา Computer Science ปี 2*
