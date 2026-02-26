@@ -3,7 +3,7 @@
 ## Document Control
 | Version | Date | Author | Role | Changes |
 | :--- | :--- | :--- | :--- | :--- |
-| v1.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
+| v1.0 | 2026-02-26 | นายรัชนาท ประเสริฐศิลป์ | DevOps / Integration | ขยายรายละเอียด Task ในแต่ละ Sprint และเพิ่มเกณฑ์ KPI |
 ## 4.แผนการดำเนินงานจำลองระบบ (Sprint Alpha + 1
 
 ---
