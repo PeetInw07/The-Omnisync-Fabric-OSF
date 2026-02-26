@@ -4,7 +4,7 @@
 ## Document Control
 | Version | Date | Author | Role | Changes |
 | :--- | :--- | :--- | :--- | :--- |
-| v1.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
+| v1.0 | 2026-02-26 | นายพิชญพงษ์ ทองแม้น | Architect | อัปเดตโครงสร้าง Architecture และ Interface สำหรับ Sprint Alpha + 1 |
 
 **The Omnisync Fabric (OSF)** ถูกออกแบบโดยใช้สถาปัตยกรรมแบบ Meta-Physical Layered Architecture ซึ่งผสมผสานระหว่างการประมวลผลข้อมูลทางชีวภาพ (Biological Computing) และการจำลองการสื่อสารเชิงควอนตัม (Quantum Communication Simulation) โครงสร้างของระบบถูกแบ่งออกเป็น 4 เลเยอร์หลัก ดังนี้:
 
