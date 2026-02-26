@@ -3,7 +3,7 @@
 ## Document Control
 | Version | Date | Author | Role | Changes |
 | :--- | :--- | :--- | :--- | :--- |
-| v1.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
+| v1.0 | 2026-02-26 | นายรัชนาท ประเสริฐศิลป์ | DevOps / Integration | เพิ่มตาราง RACI Matrix และกำหนดขอบเขตความรับผิดชอบชัดเจน |
 ## 3.บทบาทและหน้าที่รับผิดชอบเชิงลึก (Expanded Role & Responsibility)
 * **สมชิก**
   * **นายพชรพงศ์ สาหล่อน**   รหัสนักศึกษา 	673380414-7
