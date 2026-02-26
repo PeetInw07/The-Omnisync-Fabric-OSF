@@ -1,4 +1,9 @@
 # The-Omnisync-Fabric-OSF
+
+## Document Control
+| Version | Date | Author | Role | Changes |
+| :--- | :--- | :--- | :--- | :--- |
+| v2.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
 ## 4.แผนการดำเนินงานจำลองระบบ (Sprint Alpha + 1
 
 ---
