@@ -1,4 +1,9 @@
 # The-Omnisync-Fabric-OSF
+
+## Document Control
+| Version | Date | Author | Role | Changes |
+| :--- | :--- | :--- | :--- | :--- |
+| v2.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
 ## 3.บทบาทและหน้าที่รับผิดชอบเชิงลึก (Expanded Role & Responsibility)
 * **สมชิก**
   * **นายพชรพงศ์ สาหล่อน**   รหัสนักศึกษา 	673380414-7
