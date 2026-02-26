@@ -10,9 +10,33 @@
 
 ---
 
+## 1.0 Scope and Constraints (ขอบเขตและข้อจำกัดของโครงการ)
+| Aspect | In Scope (สิ่งที่อยู่ในขอบเขต) | Out of Scope (สิ่งที่อยู่นอกเหนือขอบเขต) |
+| :--- | :--- | :--- |
+| **Architecture** | การออกแบบเลเยอร์, โครงสร้างโปรโตคอล, ระบบ Bio-Addressing | การสร้างฮาร์ดแวร์ Physical Interface ของจริง |
+| **Simulation** | การจำลองเครือข่ายด้วยภาษา Python | การทดสอบกับสมองมนุษย์จริง / Quantum Entanglement จริง |
+| **Security** | การดักจับแพ็กเก็ตอารมณ์ด้วย CIDS Firewall | การเข้ารหัส Quantum Encryption ระดับฮาร์ดแวร์ |
+
 ## 1.1 Biological Interface Layer (Data Ingestion & Processing)
 ชั้นนี้ทำหน้าที่เป็นจุดรับข้อมูล (Endpoint) จากผู้ใช้ทั้ง 5 คน (Nodes) โดยมีหน้าที่หลักในการดึงข้อมูลดิบและแปลงให้อยู่ในรูปแบบที่ระบบเข้าใจได้
 
+* **Biological Signal Converters:** จำลองการรับค่าสัญญาณชีพ (เช่น อัตราการเต้นหัวใจ, คลื่นสมอง) และแปลง (Digitize) สัญญาณเหล่านั้นให้เป็น Data Object
+* **Full-Spectrum Data Normalization:** ข้อมูลความรู้สึกและประสาทสัมผัส (Senses/Emotions) จะถูกนำมาทำ Normalization ให้อยู่ในสเกลมาตรฐาน เพื่อลดความคลาดเคลื่อนก่อนส่งเข้าสู่เครือข่าย
+* **Neural Coupling Agent:** เป็น Background Service ที่รันอยู่ที่ฝั่งผู้ใช้แต่ละคน เพื่อรักษาความเสถียรของการเชื่อมต่อกับส่วนกลาง
+**Interface Definition (Python):**
+```python
+class BiologicalInterface:
+    def ingest_signal(self, raw_bio_data, user_node):
+        """รับสัญญาณดิบและทำการ Digitize เป็น Data Object"""
+        pass
+        
+    def normalize_data(self, data_object):
+        """ปรับสเกลข้อมูลให้อยู่ในพิสัยมาตรฐาน [0.0, 1.0]"""
+        pass
+```
+**Design Review Status: Approved**
+
+ชั้นนี้ทำหน้าที่เป็นจุดรับข้อมูล (Endpoint) จากผู้ใช้ทั้ง 5 คน (Nodes) โดยมีหน้าที่หลักในการดึงข้อมูลดิบและแปลงให้อยู่ในรูปแบบที่ระบบเข้าใจได้
 * **Biological Signal Converters:** จำลองการรับค่าสัญญาณชีพ (เช่น อัตราการเต้นหัวใจ, คลื่นสมอง) และแปลง (Digitize) สัญญาณเหล่านั้นให้เป็น Data Object
 * **Full-Spectrum Data Normalization:** ข้อมูลความรู้สึกและประสาทสัมผัส (Senses/Emotions) จะถูกนำมาทำ Normalization ให้อยู่ในสเกลมาตรฐาน เพื่อลดความคลาดเคลื่อนก่อนส่งเข้าสู่เครือข่าย
 * **Neural Coupling Agent:** เป็น Background Service ที่รันอยู่ที่ฝั่งผู้ใช้แต่ละคน เพื่อรักษาความเสถียรของการเชื่อมต่อกับส่วนกลาง
@@ -28,6 +52,28 @@
   * **Header:** ระบุ Sender Node และ Receiver Node
   * **Emotional Metadata:** ระบุประเภทและความเข้มข้นของความรู้สึก
   * **Sensory Payload:** ข้อมูลดิบของประสบการณ์ที่ต้องการส่งผ่าน
+```markdown
+**Interface Definition & Routing Cost (Python):**
+สมการคำนวณการหาเส้นทาง (Cost Function) อ้างอิงจากความสัมพันธ์:
+`Cost = (α * Temporal_Latency) + (β * (1 / Empathy_Weight)) + (γ * Paradox_Risk)` [cite: 113]
+
+```python
+class AuraLinkProtocol:
+    def __init__(self):
+        self.routing_table = {}
+
+    def calculate_route(self, source_node, dest_node):
+        """คำนวณเส้นทางที่สั้นที่สุดโดยอิงจาก Empathy_Weight"""
+        pass
+```
+**Design Review Status: Conditional Approval** *(รอการปรับจูนค่า Weight ของความสัมพันธ์ในสภาพแวดล้อมจำลอง)*
+
+นี่คือโปรโตคอลแกนหลัก (Core Protocol) ที่ถูกพัฒนาขึ้นมาเฉพาะสำหรับ OSF
+* **Empathy-Based Routing Engine:** อัลกอริทึมในการหาเส้นทาง (Pathfinding) จะไม่ประเมินจากความเร็วหรือระยะทางฮาร์ดแวร์ แต่ใช้ "Weight ของความสัมพันธ์" (Relationship Ties) เป็นตัวกำหนด Metric หาก Node A และ Node B มีค่าความสัมพันธ์ที่ตั้งไว้สูง (High Empathy Score) ข้อมูลจะถูกจัดลำดับ Priority ให้ส่งถึงกันก่อนเสมอ
+* **OSF Packet Structure:** โครงสร้างของแพ็กเก็ตข้อมูลจะถูกแบ่งเป็น 3 ส่วน:
+  * **Header:** ระบุ Sender Node และ Receiver Node
+  * **Emotional Metadata:** ระบุประเภทและความเข้มข้นของความรู้สึก
+  * **Sensory Payload:** ข้อมูลดิบของประสบการณ์ที่ต้องการส่งผ่าน
 
 ## 1.3 Quantum Core (Sub-space Transport Layer)
 ส่วนนี้คือการจำลองตัวกลางในการส่งข้อมูล (Transport Medium) ที่ตั้งเป้าหมายไว้ที่ Zero Latency
@@ -35,7 +81,19 @@
 * **Entanglement State Manager:** ระบบบริหารจัดการสถานะ "พัวพัน" ระหว่าง Node ทั้ง 5 โดยมองว่าแต่ละ Node เป็น Object ที่อ้างอิงสถานะร่วมกัน เมื่อมีการเปลี่ยนแปลงค่า (State Change) ที่ Node หนึ่ง ระบบจะใช้เทคนิคการอัปเดตแบบ Asynchronous Event-driven เพื่อให้ Node อื่นๆ รับรู้สถานะได้แบบเรียลไทม์
 * **Sub-space Syncing:** การจำลองท่อส่งข้อมูลแบบพิเศษที่ตัดเรื่อง Bandwidth limitation ทิ้งไปในเชิงคอนเซปต์ โดยเน้นไปที่ความต่อเนื่องของการซิงค์ข้อมูล (Continuous State Synchronization)
 
+**Design Review Status: Approved**
+
+ส่วนนี้คือการจำลองตัวกลางในการส่งข้อมูล (Transport Medium) ที่ตั้งเป้าหมายไว้ที่ Zero Latency
+* **Entanglement State Manager:** ระบบบริหารจัดการสถานะ "พัวพัน" ระหว่าง Node ทั้ง 5 โดยมองว่าแต่ละ Node เป็น Object ที่อ้างอิงสถานะร่วมกัน เมื่อมีการเปลี่ยนแปลงค่า (State Change) ที่ Node หนึ่ง ระบบจะใช้เทคนิคการอัปเดตแบบ Asynchronous Event-driven เพื่อให้ Node อื่นๆ รับรู้สถานะได้แบบเรียลไทม์
+* **Sub-space Syncing:** การจำลองท่อส่งข้อมูลแบบพิเศษที่ตัดเรื่อง Bandwidth limitation ทิ้งไปในเชิงคอนเซปต์ โดยเน้นไปที่ความต่อเนื่องของการซิงค์ข้อมูล (Continuous State Synchronization)
+
 ## 1.4 Mind-Wall Firewall (Security & Access Control Layer)
+ชั้นความปลอดภัยที่สำคัญที่สุด เพื่อป้องกันไม่ให้ข้อมูลทางความรู้สึกถูกแทรกแซง หรือส่งผลกระทบเชิงลบต่อผู้รับ
+* **Cognitive Intrusion Detection System (CIDS):** ระบบตรวจจับความผิดปกติ หากพบว่ามีแพ็กเก็ตข้อมูลที่มีค่า "อารมณ์ด้านลบสูงเกินขีดจำกัด" (เช่น ความโกรธจัด หรือความกลัวที่อาจสร้าง Trauma) ระบบจะทำการดรอป (Drop) แพ็กเก็ตนั้นทิ้งทันที
+* **Quantum-Key Privacy:** การเข้าถึงจิตสำนึกหรือความจำเฉพาะส่วน จะต้องได้รับการ Authorized จากเจ้าของข้อมูลเท่านั้น โดยจำลองกลไกการเข้ารหัสแบบ Public/Private Key ที่ผูกกับ Biological Signature ของผู้ใช้แต่ละคน
+
+**Design Review Status: Approved**
+
 ชั้นความปลอดภัยที่สำคัญที่สุด เพื่อป้องกันไม่ให้ข้อมูลทางความรู้สึกถูกแทรกแซง หรือส่งผลกระทบเชิงลบต่อผู้รับ
 * **Cognitive Intrusion Detection System (CIDS):** ระบบตรวจจับความผิดปกติ หากพบว่ามีแพ็กเก็ตข้อมูลที่มีค่า "อารมณ์ด้านลบสูงเกินขีดจำกัด" (เช่น ความโกรธจัด หรือความกลัวที่อาจสร้าง Trauma) ระบบจะทำการดรอป (Drop) แพ็กเก็ตนั้นทิ้งทันที
 * **Quantum-Key Privacy:** การเข้าถึงจิตสำนึกหรือความจำเฉพาะส่วน จะต้องได้รับการ Authorized จากเจ้าของข้อมูลเท่านั้น โดยจำลองกลไกการเข้ารหัสแบบ Public/Private Key ที่ผูกกับ Biological Signature ของผู้ใช้แต่ละคน
@@ -80,3 +138,15 @@ graph TD
   * **Associative Entity EmpathyLink:** ตารางเชื่อมความสัมพันธ์แบบ Many-to-Many ระหว่าง Node เพื่อเก็บค่า Empathy_Weight (ระดับความสัมพันธ์) ซึ่งค่านี้จะถูกนำไปใช้อ้างอิงในการทำ Routing ของข้อมูล
   * **Entity SessionLog:** เก็บเฉพาะ Metadata ของการเชื่อมต่อ (เช่น เวลาเริ่ม, ขนาดแพ็กเก็ต, Node ที่เชื่อมต่อ) โดยไม่เก็บ Payload ที่เป็นความรู้สึกส่วนตัว เพื่อรักษาความเป็นส่วนตัวตามกฎของ Mind-Wall
 * **Data Integrity & Normalization:** โครงสร้างตารางทั้งหมดถูกออกแบบให้อยู่ในรูปแบบ 3NF (Third Normal Form) เพื่อลดความซ้ำซ้อนของข้อมูล และอาจมีการเขียน Stored Procedures เข้ามาช่วยคำนวณค่า Registration Fee หรือ Cost ของการส่งข้อมูลที่ใช้ Bandwidth สูง (ถ้าในอนาคตต้องการสเกลระบบ)
+## 1.9 Architecture Decisions Log
+บันทึกการตัดสินใจเชิงสถาปัตยกรรมที่สำคัญของโครงการ OSF:
+
+* **Decision 1: การใช้ Python สำหรับ Simulation** 
+  * **Rationale (เหตุผล):** มีความยืดหยุ่นสูงและมีไลบรารีรองรับการทำ Object-Oriented Simulation ได้ดี 
+  * **Status:** Approved 
+* **Decision 2: โครงสร้างข้อมูลแบบ 3NF Database**
+  * **Rationale (เหตุผล):** เพื่อรักษา Data Integrity ของข้อมูลความสัมพันธ์ (EmpathyLink) และลดความซ้ำซ้อนของการเก็บ Node Metadata
+  * **Status:** Approved
+* **Decision 3: การใช้ Empathy-Based Routing Metric** 
+  * **Rationale (เหตุผล):** เพื่อพิสูจน์แนวคิดการสื่อสารที่ไม่ได้พึ่งพาระยะทางฮาร์ดแวร์ แต่ใช้ความสนิทสนมเป็นแกนหลัก
+  * **Status:** Conditional Approval (รอกำหนดค่า Weight อัลกอริทึมที่ชัดเจนใน Sprint ถัดไป) 
