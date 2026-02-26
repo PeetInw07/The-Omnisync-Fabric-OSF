@@ -4,8 +4,7 @@
 ## Document Control
 | Version | Date | Author | Role | Changes |
 | :--- | :--- | :--- | :--- | :--- |
-| v1.0 | 2026-02-26 | รัชนาท ประเสริฐศิลป์ | Architect | Initial architectural review for Alpha + 1 |
----
+| v1.0 | 2026-02-26 | นายรัชนาท ประเสริฐศิลป์ | DevOps / Integration | ปรับปรุงแผนงานการรวมระบบและประเมินความเสี่ยงใหม่ |
 
 เนื่องจาก The Omnisync Fabric (OSF) เป็นสถาปัตยกรรมแห่งอนาคต แผนการดำเนินงานนี้จึงมุ่งเน้นไปที่การสร้างระบบจำลอง (Software Simulation) เพื่อพิสูจน์แนวคิด (Proof of Concept) ของเทคโนโลยีหลัก โดยแบ่งระยะการพัฒนาออกเป็น 4 เฟส ดังนี้
 
