@@ -1,6 +1,7 @@
 # 🌐 The Omnisync Fabric (OSF)
 **Meta-Physical Network for Full-Spectrum Experience**
-โครงการ The Omnisync Fabric (OSF) คือการจำลองเครือข่ายสื่อสารแห่งอนาคตที่มุ่งเน้นการส่งผ่าน "ประสบการณ์" และ "อารมณ์" (Full-Spectrum Experience) ระหว่างกลุ่มผู้ใช้งาน 5 คน โดยใช้การผสมผสานระหว่างเทคโนโลยีชีวภาพและควอนตัมจำลอง
+
+โครงการ **The Omnisync Fabric (OSF)** คือการจำลองเครือข่ายสื่อสารแห่งอนาคตที่มุ่งเน้นการส่งผ่าน "ประสบการณ์" และ "อารมณ์" (Full-Spectrum Experience) ระหว่างกลุ่มผู้ใช้งาน 5 คน โดยใช้การผสมผสานระหว่างเทคโนโลยีชีวภาพและควอนตัมจำลอง
 
 ---
 
@@ -18,11 +19,11 @@
 
 | ชื่อสมาชิก | บทบาท | Layer | ความรับผิดชอบหลัก |
 | :--- | :--- | :--- | :--- |
-| นายพชรพงศ์ สาหล่อน | Chief of Bio-Interface | 1.1 | พัฒนา Signal Converters และจัดการ Data Jitter ในการเชื่อมต่อ |
-| นายพิชญพงษ์ ทองแม้น | Infrastructure Architect | 1.3 | พัฒนา Entanglement Manager และระบบ Sub-space Syncing |
-| นายศุภวัทน์ แสนเรียน | Network & Routing Eng. | 1.2 | ออกแบบ Routing Algorithm (Big O) และ OSF Packet Specification |
-| นายอนุชา ประมาระตา | Security Specialist | 1.4 | พัฒนา Mind-Wall Firewall (CIDS) และระบบ Bio-Encryption Keys |
-| นายรัชนาท ประเสริฐศิลป์ | Database Admin | 1.8 | ออกแบบ EER Diagram (3NF) และพัฒนา Stored Procedures |
+| **นายพชรพงศ์ สาหล่อน** | Chief of Bio-Interface | 1.1 | พัฒนา Signal Converters และจัดการ Data Jitter ในการเชื่อมต่อ |
+| **นายพิชญพงษ์ ทองแม้น** | Infrastructure Architect | 1.3 | พัฒนา Entanglement Manager และระบบ Sub-space Syncing |
+| **นายศุภวัทน์ แสนเรียน** | Network & Routing Eng. | 1.2 | ออกแบบ Routing Algorithm (Big O) และ OSF Packet Specification |
+| **นายอนุชา ประมาระตา** | Security Specialist | 1.4 | พัฒนา Mind-Wall Firewall (CIDS) และระบบ Bio-Encryption Keys |
+| **นายรัชนาท ประเสริฐศิลป์** | Database Admin | 1.8 | ออกแบบ EER Diagram (3NF) และพัฒนา Stored Procedures |
 
 ---
 
@@ -45,10 +46,10 @@
 * **Routing Efficiency:** ใช้ Dijkstra's Algorithm ปรับจูนด้วย Fibonacci Heap เพื่อรองรับโครงสร้าง Mesh Network
 * **Psychological Safety:** ระบบ Mind-Wall จะดรอปแพ็กเก็ตที่มีอารมณ์ด้านลบรุนแรงทันทีเพื่อป้องกันผู้รับ
 * **Latency Simulation:** ใช้ Asynchronous Programming (Python Asyncio) เพื่อจำลองความเร็วในระดับ Zero Latency
----
-
-## บทสรุปเชิงเทคนิค (Technical Summary)
-The Omnisync Fabric (OSF) ไม่ได้เป็นเพียงการส่งข้อมูลแบบดิจิทัล แต่เป็นการประยุกต์ใช้แนวคิด Quantum DNA Resonance เพื่อก้าวข้ามข้อจำกัดของโปรโตคอลการสื่อสารในปัจจุบัน โดยโครงการนี้ได้รับแรงบันดาลใจจากมาตรฐานสากล เช่น Tactile Internet (IEEE 1918.1) และโครงสร้าง Delay-Tolerant Networking (DTN) ของ NASA
 
 ---
+
+## 📄 บทสรุปเชิงเทคนิค (Technical Summary)
+The Omnisync Fabric (OSF) ไม่ได้เป็นเพียงการส่งข้อมูลแบบดิจิทัล แต่เป็นการประยุกต์ใช้แนวคิด **Quantum DNA Resonance** เพื่อก้าวข้ามข้อจำกัดของโปรโตคอลการสื่อสารในปัจจุบัน โดยโครงการนี้ได้รับแรงบันดาลใจจากมาตรฐานสากล เช่น **Tactile Internet (IEEE 1918.1)** และโครงสร้าง **Delay-Tolerant Networking (DTN)** ของ NASA
+
 *จัดทำโดย: นักศึกษา Computer Science ปี 2*
