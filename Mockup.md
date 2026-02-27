@@ -1,6 +1,3 @@
-## 🛠️ OSF System Mockup (Logical Architecture)
-
-```mermaid
 graph TD
     subgraph "Layer 1: Input"
     A[Biological Interface] -- "Biometric Signal" --> B(Aura-Link Protocol)
@@ -21,5 +18,11 @@ graph TD
     F --> G[Target Node: Receiver]
     end
 
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#f66,stroke:#fff,stroke-dasharray: 5 5
+    %% ตัวกำหนดสไตล์แบบ Clean (ไม่มีสี)
+    style A fill:none,stroke:#000,stroke-width:2px
+    style B fill:none,stroke:#000,stroke-width:2px
+    style C fill:none,stroke:#000,stroke-width:2px
+    style D fill:none,stroke:#000,stroke-width:2px
+    style E fill:none,stroke:#000,stroke-width:2px
+    style F fill:none,stroke:#000,stroke-width:2px,stroke-dasharray: 5 5
+    style G fill:none,stroke:#000,stroke-width:2px
