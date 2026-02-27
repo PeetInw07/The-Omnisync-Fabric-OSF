@@ -28,5 +28,6 @@ graph TD
 | **Layer 4** | Mind-Wall Firewall   | Security Check        | ตรวจสอบความปลอดภัยก่อนส่งออก  |
 | **Layer 5** | Output               | `print()`             | ยืนยันการส่งข้อมูลถึงผู้รับ          |
 
+
 #Code
 https://colab.research.google.com/drive/1yel7eCmnyx4npowdyZSJW1fRzHUwpppG?usp=sharing
