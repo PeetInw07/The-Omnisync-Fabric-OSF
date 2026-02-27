@@ -19,15 +19,14 @@ graph TD
     F --> G[Target Node: Receiver]
     end
 ```
-Layer 1 (Input): คือส่วนที่รับค่า emotion และ tie_score (สัญญาณชีพจรและน้ำหนักความสัมพันธ์)
 
-Layer 2 (Processing): คือขั้นตอนที่ระบบกำลังแปลงข้อมูล (ที่มีคำว่า time.sleep เพื่อจำลองการประมวลผล)
-
-Layer 3 (Routing & Security): ในโค้ดคือคำสั่ง if tie_score >= 0.7
-
-ถ้าค่าสูง = ไป High-Speed Lane (ตามผัง) ถ้าค่าต่ำ = ไป Standard Lane (ตามผัง) และทั้งคู่ต้องผ่าน Mind-Wall Firewall ก่อนเสมอ
-
-Layer 4 (Output): ในโค้ดคือส่วนสุดท้ายที่ print ว่าส่งสำเร็จไปยังผู้รับครับ
+| เลเยอร์ (Layer) | ส่วนงาน (Component) | โลจิคในโค้ด (Code Logic) | หน้าที่ (Function) |
+| :-----------| :------------------- | :---------------------| :---------------------------|
+| **Layer 1** | Biological Interface | `input()`             | รับสัญญาณชีพจรจำลอง          |
+| **Layer 2** | Aura-Link Protocol   | `time.sleep()`        | ประมวลผลและเข้ารหัสข้อมูลอารมณ์ |
+| **Layer 3** | Quantum Core         | `if tie_score >= 0.7` | เลือกเส้นทางส่งข้อมูลตามความสัมพันธ์|
+| **Layer 4** | Mind-Wall Firewall   | Security Check        | ตรวจสอบความปลอดภัยก่อนส่งออก  |
+| **Layer 5** | Output               | `print()`             | ยืนยันการส่งข้อมูลถึงผู้รับ          |
 
 #Code
 https://colab.research.google.com/drive/1yel7eCmnyx4npowdyZSJW1fRzHUwpppG?usp=sharing
