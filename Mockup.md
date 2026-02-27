@@ -17,12 +17,3 @@ graph TD
     subgraph "Layer 4: Output"
     F --> G[Target Node: Receiver]
     end
-
-    %% ตัวกำหนดสไตล์แบบ Clean (ไม่มีสี)
-    style A fill:none,stroke:#000,stroke-width:2px
-    style B fill:none,stroke:#000,stroke-width:2px
-    style C fill:none,stroke:#000,stroke-width:2px
-    style D fill:none,stroke:#000,stroke-width:2px
-    style E fill:none,stroke:#000,stroke-width:2px
-    style F fill:none,stroke:#000,stroke-width:2px,stroke-dasharray: 5 5
-    style G fill:none,stroke:#000,stroke-width:2px
