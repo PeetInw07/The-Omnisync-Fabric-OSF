@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     subgraph "Layer 1: Input"
     A[Biological Interface] -- "Biometric Signal" --> B(Aura-Link Protocol)
@@ -17,3 +18,4 @@ graph TD
     subgraph "Layer 4: Output"
     F --> G[Target Node: Receiver]
     end
+```
